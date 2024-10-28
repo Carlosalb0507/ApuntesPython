@@ -1,0 +1,19 @@
+archivo = open('direccion del archivo a trabajar', 'x') #Open(str, char) nos permite abrir archivos, por lo que 'Archivo' es un archivo
+#Donde 'x' es una de las siguientes letras: 
+#'r'-> Read only
+#'w'-> Write only
+
+datos = archivo.read() #Leer el contenido del archivo y almacenarlo en datos
+
+linea = archivo.readline()#Leer solo una linea del archivo y devuelve una string, luego salta a la siguiente para otro .readline()
+
+lineas = archivo.readlines()#Lee todas las lineas y devuelve una lista de strings
+
+archivo.write('Texto') #Se utiliza para escribir sobre el archivo, si se escribe '\n' se realiza un salto de linea
+
+#En vez de lo de arriba, se puede usar el siguiente código:
+with open('dirección del archivo a trabajar','x') as archivo: #Cuando termine el with el archivo se cierra automaticamente
+	lines_list = f.readlines()
+
+
+archivo.close()#Cerrar el archivo
